@@ -30,5 +30,10 @@ Route::get('checkout', function () {
     return view('front.checkout');
 })->name('checkout');
 
+Route::get('/confirm', function () {
+
+    return view('front.orderconfirmation');
+})->name('confirm');
+
 Route::post('addtocart/{product}', 'ProductController@addToCart')->name('addtocart');
 Route::post('removeFromCart/{id}', 'ProductController@removeFromCart')->name('removeFromCart');

@@ -36,12 +36,12 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'customer_name' => 'requred',
-        //     'customer_address' => 'requred',
-        //     'customer_phone' => 'requred',
-        // ]);
-        Order::create([
+        $request->validate([
+            'customer_name' => 'required',
+            'customer_address' => 'required',
+            'customer_phone' => 'required',
+        ]);
+        $order = Order::create([
             'customer_name' => $request->customer_name,
             'customer_address' => $request->customer_address,
             'customer_email' => $request->customer_email,
@@ -49,7 +49,7 @@ class OrderController extends Controller
             'cart' => serialize(session()->get('cart')),
         ]);
         session()->forget('cart');
-        return redirect()->back();
+        return redirect()->route('confirm');
     }
 
     /**

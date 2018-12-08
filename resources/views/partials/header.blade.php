@@ -34,9 +34,6 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li>
 									<a href="{{ route('cart') }}">
 										<i class="fa fa-shopping-cart"></i> 
@@ -66,7 +63,6 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="{{ route('products.front.index') }}" class="active">Home</a></li>
-								<li><a href="contact-us.html">Contact</a></li>
 							</ul>
 						</div>
 					</div>
